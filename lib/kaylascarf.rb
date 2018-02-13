@@ -23,6 +23,7 @@ class Kaylas_scarf
   end
 
   def list_persons
+    puts "Maggie has been messing with the thermostat again and it is getting awfully cold in the epicodus classroom. \n You look down to your desk to see that your most prized possesion your scarf is gone."
     puts "One of your classmates has your scarf"
     @person_array.each do |person|
       puts "#{person.name}"
@@ -36,8 +37,8 @@ class Kaylas_scarf
     3.times do
       guess = gets.chomp
       if guess == @scarf_holder.answer
-        puts "You got the right answer! Cameron appears out of the blue and leans in to give you a sweet kiss on the lips"
-        return "Game over Kayla and Cameron live happily ever after"
+        puts "#{@scarf_holder.name}: You got the right answer! I will happily give you your scarf. Please wear it with dignity and pride"
+        return
       end
       puts "wrong answer"
     end
@@ -51,7 +52,7 @@ class Kaylas_scarf
       choice = gets.chomp
       if choice == @scarf_holder.name
         riddle
-        puts "Game over Kayla and Cameron live happily ever after"
+        puts "Kayla: Thanks my dear friend #{@scarf_holder.name} it was getting awfully cold in here"
         return true
       end
       puts "#{choice} does not have the scarf"
